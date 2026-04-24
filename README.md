@@ -11,7 +11,18 @@ Tell the app how much you're about to spend and on what, and it recommends the b
 
 ---
 
-## What's new in v2 (April 2026)
+## What's new in v3 (April 2026)
+
+- **25 cards total**, grouped into three tiers:
+  - **14 Recommended** — MileLion's 2026 rotation: Citi Rewards, DBS yuu, HSBC Revolution, UOB PPV/VS, OCBC Rewards, Maybank cards, KrisFlyer UOB, and more
+  - **7 Premium** — high annual fee but valuable for lounge access, sign-up bonuses, or uncapped rates: UOB PRVI Miles, Citi Prestige, StanChart Beyond, HSBC Premier, AMEX Platinum Charge, AMEX KrisFlyer Ascend, DBS Altitude Visa
+  - **4 Avoid** — cards MileLion explicitly flags as not worth holding but people still hold: HSBC TravelOne, Chocolate Visa, AMEX HighFlyer, Maybank Manchester United
+- **Status badges** on every card so you can see at a glance what you're dealing with
+- **Warning banner** appears if your best-recommended card happens to be in the "avoid" list — nudging you toward better alternatives
+- **"Avoid" cards are excluded** from unowned-card suggestions so we never recommend you apply for a card MileLion says to skip
+- Mobile-responsive layout across all screen sizes
+
+## What's new in v2 (earlier April 2026)
 
 - **Dyslexia-friendly typography.** Atkinson Hyperlegible font (a research-backed typeface by the Braille Institute), with Verdana and Tahoma as system fallbacks. Generous 1.6 line-height, 18px base font size, and warm off-white background (#fbf8f1) to reduce visual stress.
 - **Wallet-first onboarding.** First-time users must select the cards they actually hold before seeing any recommendations. This ensures advice is personalized from the start.
