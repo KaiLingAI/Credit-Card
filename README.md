@@ -11,7 +11,17 @@ Tell the app how much you're about to spend and on what, and it recommends the b
 
 ---
 
-## What's new in v3 (April 2026)
+## What's new in v4 (April 2026)
+
+- **82 cards total** — comprehensive coverage based on SingSaver's credit card directory
+  - **60 Recommended** — MileLion's 2026 rotation + the most popular cards from every major issuer (Citi, DBS, HSBC, UOB, OCBC, StanChart, CIMB, AMEX, Maybank, Trust, BOC, DCS, POSB)
+  - **14 Premium** — high annual fee cards with lounge access / uncapped rates (UOB PRVI Miles, Citi Prestige/PremierMiles, StanChart Beyond, HSBC Premier, AMEX Platinum Charge + Credit, DBS Altitude AMEX/Visa, DBS Vantage, UOB Visa Infinite Metal, etc.)
+  - **8 Avoid** — cards MileLion calls out, plus low-earn-rate entry cards (HSBC TravelOne, Chocolate Visa, AMEX HighFlyer, Maybank ManU + Barcelona + Platinum, OCBC NXT, Citi Clear)
+- **Search box in card picker** — find your card by name or bank name. Essential at this scale
+- **"Verify T&Cs" indicator** on cards where the data is best-effort rather than fully verified
+- Mobile-responsive layout
+
+## What's new in v3
 
 - **25 cards total**, grouped into three tiers:
   - **14 Recommended** — MileLion's 2026 rotation: Citi Rewards, DBS yuu, HSBC Revolution, UOB PPV/VS, OCBC Rewards, Maybank cards, KrisFlyer UOB, and more

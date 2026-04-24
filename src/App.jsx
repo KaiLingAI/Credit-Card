@@ -579,6 +579,1310 @@ const CARDS_DATA = {
       annualFee: 196.20,
       notes: "⚠️ AVOID (MileLion: 'epic devaluation' Apr 2025). Keep only for fandom. Use Maybank World MC or XL Rewards instead.",
     },
+
+    // ═══════════════════════════════════════════════════════════
+    // POPULAR CARDS — broad market coverage from SingSaver directory
+    // Data accuracy varies; cards marked dataQuality:"partial" need
+    // verification against issuer T&Cs before relying on.
+    // ═══════════════════════════════════════════════════════════
+
+    // —— CITIBANK ——
+    {
+      id: "citi-premiermiles",
+      status: "recommended",
+      cardName: "Citi PremierMiles Card",
+      issuer: "Citibank",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.2, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 2.2,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Foreign Currency"],
+          conditions: "Uncapped 2.2 mpd on all FCY spend. Miles never expire. 11 airline/hotel transfer partners.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      notes: "Classic uncapped miles card. 2 free Priority Pass lounge visits/year. Miles never expire.",
+    },
+    {
+      id: "citi-cashback-plus",
+      status: "recommended",
+      cardName: "Citi Cash Back+ Card",
+      issuer: "Citibank",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.6, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 1.6,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "Uncapped 1.6% on all spend. No min spend, no category restrictions.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      notes: "Fuss-free cashback. 1.6% everywhere, uncapped, cashback never expires.",
+    },
+    {
+      id: "citi-smrt",
+      status: "recommended",
+      cardName: "Citi SMRT Card",
+      issuer: "Citibank",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 5.0,
+          unit: "percent",
+          eligibleCategories: ["Transport", "Groceries", "Online Shopping"],
+          conditions: "5% on SimplyGo transport, selected groceries, and online shopping.",
+        },
+      ],
+      minMonthlySpend: 500,
+      monthlySpendCap: 400,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Transport + lifestyle cashback. Verify specific category caps with Citibank.",
+    },
+    {
+      id: "citi-m1-platinum",
+      status: "recommended",
+      cardName: "Citi M1 Platinum Visa",
+      issuer: "Citibank",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 10.0,
+          unit: "percent",
+          eligibleCategories: ["Telco"],
+          conditions: "10% rebate on M1 telco bills. Must be M1 subscriber to get full benefit.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Niche — only makes sense for M1 subscribers.",
+    },
+    {
+      id: "citi-clear",
+      status: "avoid",
+      cardName: "Citi Clear Card",
+      issuer: "Citibank",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.0, unit: "miles_per_sgd" },
+      bonusEarnRates: [],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 30.52,
+      dataQuality: "partial",
+      notes: "Entry-level card, very low earn rate. Better options exist.",
+    },
+
+    // —— HSBC ——
+    {
+      id: "hsbc-live-plus",
+      status: "recommended",
+      cardName: "HSBC Live+ Card",
+      issuer: "HSBC",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 8.0,
+          unit: "percent",
+          eligibleCategories: ["Dining", "Entertainment", "Online Shopping"],
+          conditions: "8% on dining, entertainment, shopping (local + overseas). Min S$600/month.",
+        },
+        {
+          rate: 5.0,
+          unit: "percent",
+          eligibleCategories: ["Petrol"],
+          conditions: "5% on fuel at Caltex and Shell Singapore.",
+        },
+      ],
+      minMonthlySpend: 600,
+      monthlySpendCap: 250,
+      capPeriod: "quarter",
+      annualFee: 196.20,
+      notes: "Cashback capped at S$250/quarter. Need min S$600/month for 3 months in a quarter.",
+    },
+    {
+      id: "hsbc-advance",
+      status: "recommended",
+      cardName: "HSBC Advance Card",
+      issuer: "HSBC",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.5, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 2.5,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "2.5% cashback on all spend for HSBC Advance banking customers (with S$2K/month min spend).",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "1.5% default; 2.5% if you're an HSBC Advance banking customer and hit min spend.",
+    },
+
+    // —— UOB ——
+    {
+      id: "uob-one",
+      status: "recommended",
+      cardName: "UOB One Card",
+      issuer: "UOB",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 10.0,
+          unit: "percent",
+          eligibleCategories: ["Food Delivery", "Ride-hailing", "Transport", "Online Shopping"],
+          conditions: "10% on McDonald's, Grab, SimplyGo, Shopee. Requires S$2K/month spend across 10+ transactions per month for all 3 months of quarter.",
+        },
+        {
+          rate: 8.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries"],
+          conditions: "8% on groceries (same min spend + quarter consistency rules).",
+        },
+        {
+          rate: 4.33,
+          unit: "percent",
+          eligibleCategories: ["Utilities"],
+          conditions: "4.33% on SP utility bills.",
+        },
+        {
+          rate: 3.33,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "3.33% baseline on all other retail spend with min spend requirements met.",
+        },
+      ],
+      minMonthlySpend: 600,
+      monthlySpendCap: 200,
+      capPeriod: "quarter",
+      annualFee: 196.20,
+      notes: "Rebates paid quarterly. Very popular for consistent spenders. Requires 10+ transactions/month.",
+    },
+    {
+      id: "uob-evol",
+      status: "recommended",
+      cardName: "UOB EVOL Card",
+      issuer: "UOB",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 8.0,
+          unit: "percent",
+          eligibleCategories: ["Online Shopping", "Mobile Contactless"],
+          conditions: "8% cashback on online shopping + mobile wallets. Min S$600/month.",
+        },
+      ],
+      minMonthlySpend: 600,
+      monthlySpendCap: 60,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Digital lifestyle card. Capped at S$60/month cashback.",
+    },
+    {
+      id: "uob-absolute-cashback",
+      status: "recommended",
+      cardName: "UOB Absolute Cashback Card",
+      issuer: "UOB",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.7, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 1.7,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "Unlimited 1.7% cashback on all spend including hospital, education, insurance, utilities — which most cards exclude.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      notes: "Best card for 'excluded' categories. Hospital bills, education, insurance premiums all earn 1.7%.",
+    },
+    {
+      id: "uob-ladys",
+      status: "recommended",
+      cardName: "UOB Lady's Card",
+      issuer: "UOB",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 0.4, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 4.0,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Dining", "Online Shopping", "Transport", "Entertainment", "Beauty", "Travel"],
+          conditions: "4 mpd on 1 chosen bonus category (vs Solitaire's 2 categories). Max S$1,000/calendar month on that category.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: 1000,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      notes: "Choose 1 bonus category quarterly. Single-category S$1K cap often more useful than Solitaire's 2×S$750.",
+    },
+    {
+      id: "uob-preferred-visa",
+      status: "recommended",
+      cardName: "UOB Preferred Visa Card",
+      issuer: "UOB",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 0.4, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 4.0,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Online Shopping"],
+          conditions: "4 mpd on selected online transactions. Similar to Preferred Platinum Visa but Visa version.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: 1000,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Less commonly held; most prefer the Preferred Platinum Visa.",
+    },
+    {
+      id: "singtel-uob",
+      status: "recommended",
+      cardName: "Singtel-UOB Card",
+      issuer: "UOB",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 12.0,
+          unit: "percent",
+          eligibleCategories: ["Telco"],
+          conditions: "Up to 12% rebate on Singtel bills for Singtel customers.",
+        },
+        {
+          rate: 5.0,
+          unit: "percent",
+          eligibleCategories: ["Online Shopping", "Dining"],
+          conditions: "5% on selected online/dining with min spend.",
+        },
+      ],
+      minMonthlySpend: 500,
+      monthlySpendCap: null,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Best if you're already a Singtel subscriber.",
+    },
+    {
+      id: "uob-unionpay",
+      status: "recommended",
+      cardName: "UOB UnionPay Platinum Card",
+      issuer: "UOB",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 2.0, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 2.0,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "Unlimited 2% cashback on all UnionPay transactions.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Higher min income (S$40K). Useful for China/UnionPay-network spend.",
+    },
+    {
+      id: "uob-visa-infinite-metal",
+      status: "premium",
+      cardName: "UOB Visa Infinite Metal Card",
+      issuer: "UOB",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.4, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 2.4,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Foreign Currency"],
+          conditions: "Uncapped 2.4 mpd on FCY. Similar to PRVI Miles but premium benefits.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 654.00,
+      notes: "Premium metal card. Lounge access, limo transfers, premium dining benefits.",
+    },
+
+    // —— DBS / POSB ——
+    {
+      id: "dbs-live-fresh",
+      status: "recommended",
+      cardName: "DBS Live Fresh Card",
+      issuer: "DBS",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 9.25,
+          unit: "percent",
+          eligibleCategories: ["Online Shopping", "Mobile Contactless"],
+          conditions: "Up to 9.25% on online + visa contactless spend. Min S$800/month.",
+        },
+      ],
+      minMonthlySpend: 800,
+      monthlySpendCap: 75,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Young adult cashback card. Capped monthly.",
+    },
+    {
+      id: "dbs-live-fresh-student",
+      status: "recommended",
+      cardName: "DBS Live Fresh Student Card",
+      issuer: "DBS",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 10.0,
+          unit: "percent",
+          eligibleCategories: ["Online Shopping", "Mobile Contactless"],
+          conditions: "Up to 10% cashback on online + contactless for students. No income requirement.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: 50,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Student card, no income requirement. AF usually waived.",
+    },
+    {
+      id: "posb-everyday",
+      status: "recommended",
+      cardName: "POSB Everyday Card",
+      issuer: "POSB",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 10.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries"],
+          conditions: "10% cashback at Sheng Siong. 8% at Cold Storage, Giant, Guardian. 5% at Watsons.",
+        },
+        {
+          rate: 5.0,
+          unit: "percent",
+          eligibleCategories: ["Dining"],
+          conditions: "5% on dining + other partners.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: 50,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      notes: "Popular with families. Strong at local groceries.",
+    },
+    {
+      id: "dbs-yuu-amex",
+      status: "recommended",
+      cardName: "DBS yuu American Express Card",
+      issuer: "DBS",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 0.4, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 10.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries", "Dining", "Food Delivery", "Transport", "Telco", "Pharmacy"],
+          conditions: "AMEX variant of yuu card. Same 10 mpd at yuu merchants. Min/cap S$800/month.",
+        },
+      ],
+      minMonthlySpend: 800,
+      monthlySpendCap: 800,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      notes: "AMEX variant of DBS yuu Visa. Same mechanics.",
+    },
+    {
+      id: "dbs-altitude-amex",
+      status: "premium",
+      cardName: "DBS Altitude AMEX Card",
+      issuer: "DBS",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.3, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 2.2,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Foreign Currency", "Flights", "Hotels"],
+          conditions: "2.2 mpd on FCY and online travel. Slightly better base rate than Visa variant.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      notes: "AMEX variant of Altitude. Higher base rate (1.3 vs 1.2) but AMEX acceptance less universal.",
+    },
+    {
+      id: "dbs-vantage",
+      status: "premium",
+      cardName: "DBS Vantage Visa Infinite",
+      issuer: "DBS",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.5, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 2.2,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Foreign Currency"],
+          conditions: "2.2 mpd on FCY spend. Premium travel card with lounge access.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 599.50,
+      dataQuality: "partial",
+      notes: "Premium DBS card. Lounge access, travel benefits, S$120K min income.",
+    },
+    {
+      id: "dbs-womans-card",
+      status: "recommended",
+      cardName: "DBS Woman's Card",
+      issuer: "DBS",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 0.4, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 2.0,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Online Shopping"],
+          conditions: "2 mpd on online shopping. Lower tier than Woman's World Card.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 163.50,
+      dataQuality: "partial",
+      notes: "Standard Woman's Card. Lower earn rate than Woman's World variant.",
+    },
+    {
+      id: "dbs-takashimaya-visa",
+      status: "recommended",
+      cardName: "DBS Takashimaya Visa",
+      issuer: "DBS",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.17, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 5.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries", "Online Shopping"],
+          conditions: "5% rebate at Takashimaya department store.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Niche — only useful if you shop at Takashimaya regularly.",
+    },
+    {
+      id: "dbs-takashimaya-amex",
+      status: "recommended",
+      cardName: "DBS Takashimaya AMEX",
+      issuer: "DBS",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.17, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 6.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries", "Online Shopping"],
+          conditions: "6% rebate at Takashimaya (AMEX variant gives slightly more).",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "AMEX variant of Takashimaya card.",
+    },
+    {
+      id: "dbs-esso",
+      status: "recommended",
+      cardName: "DBS Esso Card",
+      issuer: "DBS",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 21.6,
+          unit: "percent",
+          eligibleCategories: ["Petrol"],
+          conditions: "Up to 21.6% fuel savings at Esso (combining card rebate + Smiles loyalty).",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Niche petrol card — only worth holding if you drive frequently AND prefer Esso.",
+    },
+
+    // —— OCBC ——
+    {
+      id: "ocbc-infinity",
+      status: "recommended",
+      cardName: "OCBC INFINITY Cashback Card",
+      issuer: "OCBC",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.6, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 1.6,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "Unlimited 1.6% on all spend, no min spend, no cap. Cashback auto-credited to OCBC Infinity Account.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      notes: "Simple, uncapped 1.6%. Good pairing with OCBC Infinity savings account.",
+    },
+    {
+      id: "ocbc-365",
+      status: "recommended",
+      cardName: "OCBC 365 Card",
+      issuer: "OCBC",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.25, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 6.0,
+          unit: "percent",
+          eligibleCategories: ["Petrol"],
+          conditions: "6% cashback on fuel + 22.92% discount at Caltex (18% instant).",
+        },
+        {
+          rate: 5.0,
+          unit: "percent",
+          eligibleCategories: ["Dining"],
+          conditions: "5% cashback on dining (local + overseas + food delivery).",
+        },
+        {
+          rate: 3.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries", "Telco", "Utilities", "Ride-hailing", "Entertainment", "Pharmacy", "EV Charging"],
+          conditions: "3% on groceries, private hire/taxi, recurring telco/electricity, streaming, pharmacy, EV charging.",
+        },
+      ],
+      minMonthlySpend: 800,
+      monthlySpendCap: 80,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      notes: "S$80/month cap with S$800 min spend. S$160 cap with S$1,600 min spend. 2-year AF waiver.",
+    },
+    {
+      id: "ocbc-90n-mc",
+      status: "recommended",
+      cardName: "OCBC 90°N Mastercard",
+      issuer: "OCBC",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.3, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 2.1,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Foreign Currency"],
+          conditions: "2.1 mpd on FCY spend. No miles expiry. Small conversion block (1K points = 1K miles).",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      notes: "Flexible miles card. 90°N miles have small conversion blocks, helpful for avoiding orphan points.",
+    },
+    {
+      id: "ocbc-90n-visa",
+      status: "recommended",
+      cardName: "OCBC 90°N Visa Card",
+      issuer: "OCBC",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.3, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 2.1,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Foreign Currency"],
+          conditions: "Visa variant of 90°N Mastercard. Same earn rates.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      notes: "Visa variant of 90°N Mastercard.",
+    },
+    {
+      id: "ocbc-frank",
+      status: "recommended",
+      cardName: "OCBC Frank Card",
+      issuer: "OCBC",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 10.0,
+          unit: "percent",
+          eligibleCategories: ["Online Shopping", "Mobile Contactless"],
+          conditions: "10% cashback on online + mobile wallet spend. Min S$800/month.",
+        },
+        {
+          rate: 6.0,
+          unit: "percent",
+          eligibleCategories: ["Foreign Currency"],
+          conditions: "6% cashback on overseas spend.",
+        },
+      ],
+      minMonthlySpend: 800,
+      monthlySpendCap: 75,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Young adult / Gen-Z cashback card. Capped at S$75/month.",
+    },
+    {
+      id: "ocbc-nxt",
+      status: "avoid",
+      cardName: "OCBC NXT Card",
+      issuer: "OCBC",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.5, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 1.0,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "1% cashback on all spend. Low rate compared to alternatives.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 163.50,
+      dataQuality: "partial",
+      notes: "Low earn rate. Consider OCBC INFINITY (1.6%) or Absolute Cashback (1.7%) instead.",
+    },
+
+    // —— STANDARD CHARTERED ——
+    {
+      id: "stanchart-simply-cash",
+      status: "recommended",
+      cardName: "StanChart Simply Cash Card",
+      issuer: "Standard Chartered",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.5, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 1.5,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "Unlimited 1.5% cashback, no min spend, no cap.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      notes: "Simplest cashback option. Lower rate than OCBC INFINITY (1.6%) or UOB Absolute (1.7%).",
+    },
+    {
+      id: "stanchart-journey",
+      status: "recommended",
+      cardName: "StanChart Journey Card",
+      issuer: "Standard Chartered",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.2, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 3.0,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Foreign Currency", "Flights"],
+          conditions: "3 mpd on FCY + travel. 2 mpd on other local travel.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Travel-focused miles card. Good FCY rate.",
+    },
+    {
+      id: "stanchart-rewards-plus",
+      status: "recommended",
+      cardName: "StanChart Rewards+ Card",
+      issuer: "Standard Chartered",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 0.4, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 4.0,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Online Shopping", "Mobile Contactless"],
+          conditions: "10 points/dollar (4 mpd) on selected online shopping and mobile contactless.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: 1000,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Replaces older StanChart rewards cards. Similar tier to HSBC Revolution.",
+    },
+    {
+      id: "stanchart-visa-infinite",
+      status: "premium",
+      cardName: "StanChart Visa Infinite Card",
+      issuer: "Standard Chartered",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.0, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 3.0,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Foreign Currency"],
+          conditions: "3 mpd on FCY. S$150K min income. Lounge access.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 599.50,
+      dataQuality: "partial",
+      notes: "Older Visa Infinite — being eclipsed by StanChart Beyond Card for most high-spenders.",
+    },
+
+    // —— CIMB ——
+    {
+      id: "cimb-world-mc",
+      status: "recommended",
+      cardName: "CIMB World Mastercard",
+      issuer: "CIMB",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.0, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 2.0,
+          unit: "percent",
+          eligibleCategories: ["Foreign Currency", "Flights", "Hotels", "Dining"],
+          conditions: "2% on FCY, travel, dining. No annual fee ever.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 0,
+      notes: "Popular no-AF card. 2% on overseas + travel + dining is solid for cashback lovers.",
+    },
+    {
+      id: "cimb-visa-signature",
+      status: "recommended",
+      cardName: "CIMB Visa Signature Card",
+      issuer: "CIMB",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.2, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 10.0,
+          unit: "percent",
+          eligibleCategories: ["Beauty", "Pharmacy", "Groceries"],
+          conditions: "10% on beauty, pharmacy, groceries with min S$500/month.",
+        },
+      ],
+      minMonthlySpend: 500,
+      monthlySpendCap: 100,
+      capPeriod: "calendar",
+      annualFee: 0,
+      dataQuality: "partial",
+      notes: "No annual fee. Good for beauty/pharmacy/groceries.",
+    },
+    {
+      id: "cimb-visa-infinite",
+      status: "premium",
+      cardName: "CIMB Visa Infinite Card",
+      issuer: "CIMB",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.0, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 3.0,
+          unit: "percent",
+          eligibleCategories: ["Foreign Currency"],
+          conditions: "Unlimited 3% on FCY. S$120K min income. No annual fee.",
+        },
+      ],
+      minMonthlySpend: 2000,
+      monthlySpendCap: null,
+      capPeriod: "calendar",
+      annualFee: 0,
+      notes: "No AF premium card. Requires S$2K/month spend for 3% FCY rate. S$120K min income.",
+    },
+
+    // —— AMEX ——
+    {
+      id: "amex-true-cashback",
+      status: "recommended",
+      cardName: "AMEX True Cashback Card",
+      issuer: "American Express",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.5, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 3.0,
+          unit: "percent",
+          eligibleCategories: ["Foreign Currency"],
+          conditions: "3% cashback on FCY spend for first 6 months (then 1.5%).",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 174.40,
+      notes: "Simple unlimited cashback. Rate after intro period: 1.5% everywhere.",
+    },
+    {
+      id: "amex-krisflyer-cc",
+      status: "recommended",
+      cardName: "AMEX KrisFlyer Credit Card",
+      issuer: "American Express",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.1, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 2.0,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Flights"],
+          conditions: "2 mpd on SIA Group (SQ, Scoot, KrisShop). Direct KrisFlyer miles.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 179.85,
+      notes: "Cheaper alternative to KrisFlyer Ascend (no lounge perks). Direct KF miles, no conversion fee.",
+    },
+    {
+      id: "amex-platinum-cc",
+      status: "premium",
+      cardName: "AMEX Platinum Credit Card",
+      issuer: "American Express",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 2.0, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 10.0,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Dining"],
+          conditions: "Up to 10 Membership Rewards points/dollar on select categories (promotional).",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 327.00,
+      dataQuality: "partial",
+      notes: "Mid-tier AMEX (not the Platinum Charge). MR points + some lounge access.",
+    },
+
+    // —— MAYBANK ——
+    {
+      id: "maybank-fnf",
+      status: "recommended",
+      cardName: "Maybank Family & Friends Card",
+      issuer: "Maybank",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.22, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 8.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries", "Dining", "Transport", "Telco", "Pharmacy"],
+          conditions: "8% cashback on 5 selected categories with min S$800/month.",
+        },
+      ],
+      minMonthlySpend: 800,
+      monthlySpendCap: 80,
+      capPeriod: "calendar",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Popular multi-category cashback card.",
+    },
+    {
+      id: "maybank-platinum",
+      status: "avoid",
+      cardName: "Maybank Platinum Visa Card",
+      issuer: "Maybank",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.4, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 3.33,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "3.33% on all spend with conditions.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 20.00,
+      dataQuality: "partial",
+      notes: "Low AF but weak earn rates. Better alternatives exist.",
+    },
+    {
+      id: "maybank-barcelona",
+      status: "avoid",
+      cardName: "Maybank FC Barcelona Card",
+      issuer: "Maybank",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.6, unit: "percent" },
+      bonusEarnRates: [],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 130.80,
+      dataQuality: "partial",
+      notes: "Niche fandom card. 1.6% is just OK — better alternatives at similar AF.",
+    },
+    {
+      id: "maybank-xl-cashback",
+      status: "recommended",
+      cardName: "Maybank XL Cashback Card",
+      issuer: "Maybank",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.2, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 5.0,
+          unit: "percent",
+          eligibleCategories: ["Dining", "Foreign Currency", "Entertainment"],
+          conditions: "5% cashback on dining, shopping, travel, entertainment. Min S$500/month.",
+        },
+      ],
+      minMonthlySpend: 500,
+      monthlySpendCap: 100,
+      capPeriod: "calendar",
+      annualFee: 87.20,
+      dataQuality: "partial",
+      notes: "Cashback variant of XL Rewards Card. Low AF.",
+    },
+
+    // —— TRUST BANK ——
+    {
+      id: "trust-cashback",
+      status: "recommended",
+      cardName: "Trust Cashback Card",
+      issuer: "Trust Bank",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.0, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 15.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries"],
+          conditions: "Up to 15% at FairPrice (stacked). 1% elsewhere. No AF.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: 300,
+      capPeriod: "calendar",
+      annualFee: 0,
+      dataQuality: "partial",
+      notes: "No annual fee. Best at NTUC FairPrice. Instant issuance via Trust app.",
+    },
+    {
+      id: "trust-link",
+      status: "recommended",
+      cardName: "Trust Link / NTUC Link Card",
+      issuer: "Trust Bank",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.22, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 21.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries"],
+          conditions: "Up to 21% at FairPrice (combining card cashback + Link points + promos).",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: 300,
+      capPeriod: "calendar",
+      annualFee: 0,
+      dataQuality: "partial",
+      notes: "NTUC Link integration. Best at FairPrice if you stack promos.",
+    },
+
+    // —— BOC ——
+    {
+      id: "boc-elite-miles",
+      status: "recommended",
+      cardName: "BOC Elite Miles World Mastercard",
+      issuer: "Bank of China",
+      rewardType: "Miles",
+      baseEarnRate: { rate: 1.0, unit: "miles_per_sgd" },
+      bonusEarnRates: [
+        {
+          rate: 2.8,
+          unit: "miles_per_sgd",
+          eligibleCategories: ["Foreign Currency", "Online Shopping"],
+          conditions: "2.8 mpd on FCY + online. Up to 8.8 mpd with promos (Sep 2025 enhancement).",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 203.30,
+      notes: "Enhanced Sep 2025 with 6 mpd bonus for many categories. Watch for ongoing promos.",
+    },
+    {
+      id: "boc-sheng-siong",
+      status: "recommended",
+      cardName: "BOC Sheng Siong Card",
+      issuer: "Bank of China",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 12.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries"],
+          conditions: "Up to 12% cashback at Sheng Siong outlets.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: 90,
+      capPeriod: "calendar",
+      annualFee: 32.10,
+      dataQuality: "partial",
+      notes: "Niche — only useful if you shop at Sheng Siong regularly. Very low AF.",
+    },
+    {
+      id: "boc-family",
+      status: "recommended",
+      cardName: "BOC Family Card",
+      issuer: "Bank of China",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 10.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries", "Dining", "Online Shopping"],
+          conditions: "Up to 10% cashback on groceries + dining + online.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: 100,
+      capPeriod: "calendar",
+      annualFee: 205.20,
+      dataQuality: "partial",
+      notes: "Family-focused cashback.",
+    },
+    {
+      id: "boc-zaobao",
+      status: "recommended",
+      cardName: "BOC Zaobao Card",
+      issuer: "Bank of China",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.5, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 10.0,
+          unit: "percent",
+          eligibleCategories: ["Dining", "Online Shopping"],
+          conditions: "Up to 10% on dining + online with qualifying spend.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: 100,
+      capPeriod: "calendar",
+      annualFee: 205.20,
+      dataQuality: "partial",
+      notes: "Niche card tied to Zaobao publication.",
+    },
+    {
+      id: "boc-visa-infinite",
+      status: "premium",
+      cardName: "BOC Visa Infinite Card",
+      issuer: "Bank of China",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 1.6, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 1.8,
+          unit: "percent",
+          eligibleCategories: ["Foreign Currency"],
+          conditions: "1.8% cashback on overseas spend. Priority Pass lounge access.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 374.50,
+      dataQuality: "partial",
+      notes: "Premium BOC card. S$120K min income. Lounge access.",
+    },
+
+    // —— DCS ——
+    {
+      id: "dcs-flex",
+      status: "recommended",
+      cardName: "DCS Flex Visa Platinum Card",
+      issuer: "DCS",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.3, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 8.0,
+          unit: "percent",
+          eligibleCategories: ["Dining", "Online Shopping"],
+          conditions: "Up to 8% cashback on flexible categories.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 130.80,
+      dataQuality: "partial",
+      notes: "DCS = Diners Club Singapore. Lower acceptance than Visa/MC but still usable.",
+    },
+    {
+      id: "dcs-ultimate-mc",
+      status: "recommended",
+      cardName: "DCS Ultimate Platinum Mastercard",
+      issuer: "DCS",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 2.0, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 2.0,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "Flat 2% unlimited cashback on all spend.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Flat 2% everywhere. Competitive with UOB Absolute (1.7%).",
+    },
+    {
+      id: "dcs-ultimate-upi",
+      status: "recommended",
+      cardName: "DCS Ultimate Platinum UnionPay",
+      issuer: "DCS",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 2.0, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 2.0,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "Flat 2% unlimited cashback. UnionPay variant.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "UnionPay version of DCS Ultimate. Good for China/UnionPay merchants.",
+    },
+    {
+      id: "dcs-cashback",
+      status: "recommended",
+      cardName: "DCS CASHBACK Card",
+      issuer: "DCS",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 5.0, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 5.0,
+          unit: "percent",
+          eligibleCategories: ["All"],
+          conditions: "5% cashback (usually with conditions/caps — verify).",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Verify exact cashback mechanics with DCS before relying on.",
+    },
+    {
+      id: "dcs-donki",
+      status: "recommended",
+      cardName: "DCS DON DON DONKI Card",
+      issuer: "DCS",
+      rewardType: "Cashback",
+      baseEarnRate: { rate: 0.5, unit: "percent" },
+      bonusEarnRates: [
+        {
+          rate: 5.0,
+          unit: "percent",
+          eligibleCategories: ["Groceries"],
+          conditions: "5% cashback at Don Don Donki stores.",
+        },
+      ],
+      minMonthlySpend: 0,
+      monthlySpendCap: null,
+      capPeriod: "none",
+      annualFee: 196.20,
+      dataQuality: "partial",
+      notes: "Niche — only useful if you shop at Don Don Donki regularly.",
+    },
   ],
 };
 
@@ -767,66 +2071,129 @@ const CARD_GROUP_LABELS = {
   avoid: { title: "Cards to avoid", subtitle: "MileLion says these aren't worth holding. Tick them here only if you already have them so we can warn you." },
 };
 
-// Reusable card picker that shows grouped sections with status badges
-const CardPickerGroups = ({ ownedCards, onToggleCard, compact = false }) => (
-  <div className="space-y-6">
-    {["recommended", "premium", "avoid"].map((statusKey) => {
-      const group = GROUPED_CARDS[statusKey];
-      if (group.length === 0) return null;
-      const meta = CARD_GROUP_LABELS[statusKey];
-      return (
-        <div key={statusKey}>
-          <div className="mb-2 sm:mb-3">
-            <h4 className={`text-sm sm:text-base font-bold ${statusKey === "avoid" ? "text-[#8a3a3a]" : "text-[#2d3a2d]"}`}>
-              {meta.title}
-            </h4>
-            <p className="text-xs sm:text-sm text-[#5a5648] mt-0.5">{meta.subtitle}</p>
+// Reusable card picker that shows grouped sections with status badges, plus search
+const CardPickerGroups = ({ ownedCards, onToggleCard, compact = false }) => {
+  const [search, setSearch] = useState("");
+
+  const query = search.trim().toLowerCase();
+  const filterFn = (card) => {
+    if (!query) return true;
+    return (
+      card.cardName.toLowerCase().includes(query) ||
+      card.issuer.toLowerCase().includes(query) ||
+      (card.rewardType || "").toLowerCase().includes(query)
+    );
+  };
+
+  const filtered = {
+    recommended: GROUPED_CARDS.recommended.filter(filterFn),
+    premium: GROUPED_CARDS.premium.filter(filterFn),
+    avoid: GROUPED_CARDS.avoid.filter(filterFn),
+  };
+
+  const totalMatches = filtered.recommended.length + filtered.premium.length + filtered.avoid.length;
+
+  return (
+    <div>
+      {/* Search box — essential at 70+ cards */}
+      <div className="mb-5 relative">
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search your cards by name or bank…"
+          className="w-full px-4 py-3 pl-10 text-sm sm:text-base text-[#2d3a2d] bg-white border-2 border-[#c4b8a8] rounded-lg focus:border-[#5a6b5a] focus:outline-none"
+          aria-label="Search cards"
+        />
+        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8a8375] text-base pointer-events-none">🔍</span>
+        {search && (
+          <button
+            onClick={() => setSearch("")}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#8a8375] hover:text-[#2d3a2d] text-sm font-bold"
+            aria-label="Clear search"
+          >
+            ✕
+          </button>
+        )}
+        {query && (
+          <p className="text-xs text-[#5a5648] mt-2">
+            {totalMatches} {totalMatches === 1 ? "match" : "matches"} · <strong>{ownedCards.length}</strong> in your wallet
+          </p>
+        )}
+      </div>
+
+      <div className="space-y-6">
+        {["recommended", "premium", "avoid"].map((statusKey) => {
+          const group = filtered[statusKey];
+          if (group.length === 0) return null;
+          const meta = CARD_GROUP_LABELS[statusKey];
+          return (
+            <div key={statusKey}>
+              <div className="mb-2 sm:mb-3">
+                <h4 className={`text-sm sm:text-base font-bold ${statusKey === "avoid" ? "text-[#8a3a3a]" : "text-[#2d3a2d]"}`}>
+                  {meta.title}
+                </h4>
+                <p className="text-xs sm:text-sm text-[#5a5648] mt-0.5">{meta.subtitle}</p>
+              </div>
+              <div className="space-y-2">
+                {group.map((card) => {
+                  const owned = ownedCards.includes(card.id);
+                  return (
+                    <button
+                      key={card.id}
+                      onClick={() => onToggleCard(card.id)}
+                      aria-pressed={owned}
+                      className={`w-full flex items-center justify-between p-3 sm:p-4 border-2 rounded-lg text-left transition-colors ${
+                        owned
+                          ? statusKey === "avoid"
+                            ? "border-[#c87a7a] bg-[#c87a7a]/10"
+                            : "border-[#5a6b5a] bg-[#e8e2d5]"
+                          : "border-[#c4b8a8] bg-white hover:border-[#8a8375]"
+                      }`}
+                    >
+                      <div className="flex-1 pr-3 min-w-0">
+                        <div className="flex items-center gap-2 flex-wrap mb-1">
+                          <span className="text-sm sm:text-base font-bold text-[#2d3a2d] leading-tight">{card.cardName}</span>
+                          <StatusBadge status={card.status} />
+                          {card.dataQuality === "partial" && (
+                            <span className="text-[10px] sm:text-xs text-[#8a8375] italic">(verify T&Cs)</span>
+                          )}
+                        </div>
+                        <div className="text-xs sm:text-sm text-[#5a5648]">
+                          {card.issuer} · {card.rewardType}
+                        </div>
+                      </div>
+                      <div
+                        className={`w-5 h-5 sm:w-6 sm:h-6 border-2 rounded flex items-center justify-center flex-shrink-0 ${
+                          owned
+                            ? statusKey === "avoid"
+                              ? "border-[#c87a7a] bg-[#c87a7a]"
+                              : "border-[#5a6b5a] bg-[#5a6b5a]"
+                            : "border-[#c4b8a8] bg-white"
+                        }`}
+                      >
+                        {owned && <span className="text-white text-xs sm:text-sm font-bold">✓</span>}
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+
+        {query && totalMatches === 0 && (
+          <div className="text-center py-8 text-[#5a5648]">
+            <p className="text-base italic mb-2">No cards match "{search}"</p>
+            <button onClick={() => setSearch("")} className="text-sm font-bold text-[#5a6b5a] underline">
+              Clear search
+            </button>
           </div>
-          <div className="space-y-2">
-            {group.map((card) => {
-              const owned = ownedCards.includes(card.id);
-              return (
-                <button
-                  key={card.id}
-                  onClick={() => onToggleCard(card.id)}
-                  aria-pressed={owned}
-                  className={`w-full flex items-center justify-between p-3 sm:p-4 border-2 rounded-lg text-left transition-colors ${
-                    owned
-                      ? statusKey === "avoid"
-                        ? "border-[#c87a7a] bg-[#c87a7a]/10"
-                        : "border-[#5a6b5a] bg-[#e8e2d5]"
-                      : "border-[#c4b8a8] bg-white hover:border-[#8a8375]"
-                  }`}
-                >
-                  <div className="flex-1 pr-3 min-w-0">
-                    <div className="flex items-center gap-2 flex-wrap mb-1">
-                      <span className="text-sm sm:text-base font-bold text-[#2d3a2d] leading-tight">{card.cardName}</span>
-                      <StatusBadge status={card.status} />
-                    </div>
-                    <div className="text-xs sm:text-sm text-[#5a5648]">
-                      {card.issuer} · {card.rewardType}
-                    </div>
-                  </div>
-                  <div
-                    className={`w-5 h-5 sm:w-6 sm:h-6 border-2 rounded flex items-center justify-center flex-shrink-0 ${
-                      owned
-                        ? statusKey === "avoid"
-                          ? "border-[#c87a7a] bg-[#c87a7a]"
-                          : "border-[#5a6b5a] bg-[#5a6b5a]"
-                        : "border-[#c4b8a8] bg-white"
-                    }`}
-                  >
-                    {owned && <span className="text-white text-xs sm:text-sm font-bold">✓</span>}
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      );
-    })}
-  </div>
-);
+        )}
+      </div>
+    </div>
+  );
+};
 
 const PreferenceToggle = ({ value, onChange }) => {
   const options = [
