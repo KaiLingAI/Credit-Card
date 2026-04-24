@@ -4,7 +4,19 @@
 
 /* Dyslexia-friendly defaults applied globally */
 html {
-  font-size: 18px; /* base size larger than the default 16px */
+  font-size: 16px; /* base for mobile */
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 17px; /* slightly larger on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px; /* full size on laptops/desktops */
+  }
 }
 
 html, body {
@@ -35,4 +47,11 @@ html, body {
 
 button, input, select {
   font-family: inherit;
+}
+
+/* Prevent zoom on input focus on iOS */
+@supports (-webkit-touch-callout: none) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
 }

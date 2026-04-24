@@ -520,24 +520,24 @@ const PreferenceToggle = ({ value, onChange }) => {
 const SettingsDrawer = ({ open, onClose, ownedCards, monthlyUsage, onToggleCard, onUpdateUsage, onResetMonth }) => (
   <>
     <div
-      className={`fixed inset-0 bg-[#2d3a2d]/30 transition-opacity duration-300 z-40 ${
+      className={`fixed inset-0 bg-[#2d3a2d]/60 transition-opacity duration-300 z-40 ${
         open ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
       onClick={onClose}
       aria-hidden="true"
     />
     <aside
-      className={`fixed top-0 right-0 h-full w-full max-w-lg bg-[#fbf8f1] border-l-2 border-[#c4b8a8] z-50 transition-transform duration-300 overflow-y-auto ${
+      className={`fixed top-0 right-0 h-full w-full sm:max-w-lg bg-[#fbf8f1] border-l-2 border-[#c4b8a8] z-50 transition-transform duration-300 overflow-y-auto ${
         open ? "translate-x-0" : "translate-x-full"
       }`}
       role="dialog"
       aria-label="Wallet and spending tracker"
     >
-      <div className="px-8 py-10">
-        <div className="flex items-start justify-between mb-10">
+      <div className="px-5 py-8 sm:px-8 sm:py-10">
+        <div className="flex items-start justify-between mb-8 sm:mb-10">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-[#5a6b5a] mb-2">Your Wallet</p>
-            <h2 className="text-3xl font-bold text-[#2d3a2d]">Settings</h2>
+            <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#5a6b5a] mb-2">Your Wallet</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#2d3a2d]">Settings</h2>
           </div>
           <button
             onClick={onClose}
@@ -549,9 +549,9 @@ const SettingsDrawer = ({ open, onClose, ownedCards, monthlyUsage, onToggleCard,
         </div>
 
         {/* Wallet */}
-        <section className="mb-12">
-          <h3 className="text-lg font-bold text-[#2d3a2d] mb-2">Cards you hold</h3>
-          <p className="text-base text-[#5a5648] mb-6">
+        <section className="mb-10 sm:mb-12">
+          <h3 className="text-base sm:text-lg font-bold text-[#2d3a2d] mb-2">Cards you hold</h3>
+          <p className="text-sm sm:text-base text-[#5a5648] mb-5">
             Tick the cards you actually own. Recommendations will be scoped to your wallet.
           </p>
           <div className="space-y-3">
@@ -562,24 +562,24 @@ const SettingsDrawer = ({ open, onClose, ownedCards, monthlyUsage, onToggleCard,
                   key={card.id}
                   onClick={() => onToggleCard(card.id)}
                   aria-pressed={owned}
-                  className={`w-full flex items-center justify-between p-5 border-2 rounded-lg text-left transition-colors ${
+                  className={`w-full flex items-center justify-between p-4 sm:p-5 border-2 rounded-lg text-left transition-colors ${
                     owned
                       ? "border-[#5a6b5a] bg-[#e8e2d5]"
                       : "border-[#c4b8a8] bg-white hover:border-[#8a8375]"
                   }`}
                 >
-                  <div className="flex-1 pr-4">
-                    <div className="text-base font-bold text-[#2d3a2d] mb-1">{card.cardName}</div>
-                    <div className="text-sm text-[#5a5648]">
+                  <div className="flex-1 pr-3 min-w-0">
+                    <div className="text-sm sm:text-base font-bold text-[#2d3a2d] mb-1 leading-tight">{card.cardName}</div>
+                    <div className="text-xs sm:text-sm text-[#5a5648]">
                       {card.issuer} · {card.rewardType}
                     </div>
                   </div>
                   <div
-                    className={`w-6 h-6 border-2 rounded flex items-center justify-center flex-shrink-0 ${
+                    className={`w-5 h-5 sm:w-6 sm:h-6 border-2 rounded flex items-center justify-center flex-shrink-0 ${
                       owned ? "border-[#5a6b5a] bg-[#5a6b5a]" : "border-[#c4b8a8] bg-white"
                     }`}
                   >
-                    {owned && <span className="text-white text-sm font-bold">✓</span>}
+                    {owned && <span className="text-white text-xs sm:text-sm font-bold">✓</span>}
                   </div>
                 </button>
               );
@@ -589,25 +589,25 @@ const SettingsDrawer = ({ open, onClose, ownedCards, monthlyUsage, onToggleCard,
 
         {/* Tracker */}
         <section>
-          <div className="flex items-baseline justify-between mb-2">
-            <h3 className="text-lg font-bold text-[#2d3a2d]">This month's spend</h3>
+          <div className="flex items-baseline justify-between mb-2 gap-3">
+            <h3 className="text-base sm:text-lg font-bold text-[#2d3a2d]">This month's spend</h3>
             <button
               onClick={onResetMonth}
-              className="text-sm font-bold text-[#5a6b5a] hover:text-[#2d3a2d] underline underline-offset-4"
+              className="text-xs sm:text-sm font-bold text-[#5a6b5a] hover:text-[#2d3a2d] underline underline-offset-4"
             >
               Reset all
             </button>
           </div>
-          <p className="text-base text-[#5a5648] mb-6">
+          <p className="text-sm sm:text-base text-[#5a5648] mb-5">
             Log how much you've already spent on each card this month so we can track when caps are hit.
           </p>
 
           {ownedCards.length === 0 ? (
-            <p className="text-base text-[#5a5648] italic bg-white border-2 border-dashed border-[#c4b8a8] rounded-lg p-6">
+            <p className="text-sm sm:text-base text-[#5a5648] italic bg-white border-2 border-dashed border-[#c4b8a8] rounded-lg p-5">
               Select the cards you hold above to begin tracking.
             </p>
           ) : (
-            <div className="space-y-6">
+            <div className="space-y-5">
               {CARDS_DATA.cards
                 .filter((c) => ownedCards.includes(c.id))
                 .map((card) => {
@@ -618,20 +618,21 @@ const SettingsDrawer = ({ open, onClose, ownedCards, monthlyUsage, onToggleCard,
                   const minMet = card.minMonthlySpend === 0 || spent >= card.minMonthlySpend;
 
                   return (
-                    <div key={card.id} className="bg-white border-2 border-[#c4b8a8] rounded-lg p-5">
-                      <div className="flex items-baseline justify-between mb-3 gap-3">
-                        <label htmlFor={`spend-${card.id}`} className="text-base font-bold text-[#2d3a2d]">
+                    <div key={card.id} className="bg-white border-2 border-[#c4b8a8] rounded-lg p-4 sm:p-5">
+                      <div className="flex items-baseline justify-between mb-3 gap-3 flex-wrap">
+                        <label htmlFor={`spend-${card.id}`} className="text-sm sm:text-base font-bold text-[#2d3a2d] leading-tight">
                           {card.cardName}
                         </label>
                         <div className="flex items-center gap-2">
-                          <span className="text-base text-[#5a5648]">S$</span>
+                          <span className="text-sm sm:text-base text-[#5a5648]">S$</span>
                           <input
                             id={`spend-${card.id}`}
                             type="number"
+                            inputMode="decimal"
                             value={spent || ""}
                             onChange={(e) => onUpdateUsage(card.id, parseFloat(e.target.value) || 0)}
                             placeholder="0"
-                            className="w-24 text-right text-base font-bold text-[#2d3a2d] bg-[#fbf8f1] border-2 border-[#c4b8a8] rounded px-2 py-1 focus:border-[#5a6b5a] focus:outline-none"
+                            className="w-24 text-right text-sm sm:text-base font-bold text-[#2d3a2d] bg-[#fbf8f1] border-2 border-[#c4b8a8] rounded px-2 py-1 focus:border-[#5a6b5a] focus:outline-none"
                           />
                         </div>
                       </div>
@@ -646,7 +647,7 @@ const SettingsDrawer = ({ open, onClose, ownedCards, monthlyUsage, onToggleCard,
                               style={{ width: `${pct}%` }}
                             />
                           </div>
-                          <div className="flex justify-between mt-2 text-sm text-[#5a5648]">
+                          <div className="flex justify-between mt-2 text-xs sm:text-sm text-[#5a5648] gap-2">
                             <span className={maxed ? "font-bold text-[#a87d55]" : ""}>
                               {maxed ? "Cap reached" : `S$${(cap - spent).toFixed(0)} until cap`}
                             </span>
@@ -656,7 +657,7 @@ const SettingsDrawer = ({ open, onClose, ownedCards, monthlyUsage, onToggleCard,
                       )}
 
                       {card.minMonthlySpend > 0 && (
-                        <div className="mt-2 text-sm">
+                        <div className="mt-2 text-xs sm:text-sm">
                           {minMet ? (
                             <span className="text-[#5a6b5a] font-bold">✓ Minimum spend met</span>
                           ) : (
@@ -673,7 +674,7 @@ const SettingsDrawer = ({ open, onClose, ownedCards, monthlyUsage, onToggleCard,
           )}
         </section>
 
-        <p className="text-sm text-[#5a5648] mt-10 pt-6 border-t-2 border-[#c4b8a8]">
+        <p className="text-xs sm:text-sm text-[#5a5648] mt-8 sm:mt-10 pt-5 sm:pt-6 border-t-2 border-[#c4b8a8]">
           Your wallet and spending data are stored privately in your own browser. Nothing is shared with anyone else.
         </p>
       </div>
@@ -699,31 +700,31 @@ const ResultCard = ({ result, label, isPrimary, isUnownedSuggestion }) => {
   const bgColor = isUnownedSuggestion ? "bg-[#f5ede0]" : isPrimary ? "bg-[#e8e2d5]" : "bg-white";
 
   return (
-    <div className={`border-2 ${borderColor} ${bgColor} rounded-xl p-8`}>
+    <div className={`border-2 ${borderColor} ${bgColor} rounded-xl p-5 sm:p-8`}>
       <div className="flex items-baseline justify-between mb-4 gap-3 flex-wrap">
-        <p className="text-sm font-bold uppercase tracking-wider text-[#5a6b5a]">{label}</p>
-        <p className="text-sm font-bold text-[#5a5648]">{result.issuer}</p>
+        <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#5a6b5a]">{label}</p>
+        <p className="text-xs sm:text-sm font-bold text-[#5a5648]">{result.issuer}</p>
       </div>
 
       {isUnownedSuggestion && (
         <div className="mb-4 p-3 bg-white border-2 border-[#a87d55] rounded-lg">
-          <p className="text-sm font-bold text-[#a87d55]">
+          <p className="text-xs sm:text-sm font-bold text-[#a87d55]">
             💡 You don't own this card — but it would earn significantly more.
           </p>
         </div>
       )}
 
-      <h3 className="text-2xl font-bold text-[#2d3a2d] mb-2">{result.cardName}</h3>
-      <p className="text-base text-[#5a5648] mb-6">
+      <h3 className="text-xl sm:text-2xl font-bold text-[#2d3a2d] mb-2 leading-tight">{result.cardName}</h3>
+      <p className="text-sm sm:text-base text-[#5a5648] mb-5 sm:mb-6">
         {result.rewardType} · <strong>{result.bonusRate}{result.rewardType === "Cashback" ? "%" : " mpd"}</strong> on this category
       </p>
 
-      <div className="border-t-2 border-[#c4b8a8] pt-6 mb-6 flex items-baseline justify-between">
-        <p className="text-base font-bold text-[#5a5648]">You'll earn</p>
+      <div className="border-t-2 border-[#c4b8a8] pt-5 sm:pt-6 mb-5 sm:mb-6 flex items-baseline justify-between gap-3">
+        <p className="text-sm sm:text-base font-bold text-[#5a5648]">You'll earn</p>
         <div className="text-right">
-          <p className="text-4xl font-bold text-[#2d3a2d]">S${result.totalReturnSGD.toFixed(2)}</p>
+          <p className="text-3xl sm:text-4xl font-bold text-[#2d3a2d]">S${result.totalReturnSGD.toFixed(2)}</p>
           {result.rewardType === "Miles" && (
-            <p className="text-base text-[#5a5648] mt-1">{result.totalNative.toLocaleString()} miles</p>
+            <p className="text-sm sm:text-base text-[#5a5648] mt-1">{result.totalNative.toLocaleString()} miles</p>
           )}
         </div>
       </div>
@@ -731,8 +732,8 @@ const ResultCard = ({ result, label, isPrimary, isUnownedSuggestion }) => {
       <div className="space-y-3">
         {result.remainingCap != null && !result.partiallyCapped && (
           <div className="flex gap-3 items-start">
-            <span className="text-[#5a6b5a] font-bold mt-1">•</span>
-            <p className="text-base text-[#2d3a2d]">
+            <span className="text-[#5a6b5a] font-bold mt-0.5 flex-shrink-0">•</span>
+            <p className="text-sm sm:text-base text-[#2d3a2d]">
               <strong>S${result.remainingCap.toFixed(0)}</strong> remaining before bonus cap
             </p>
           </div>
@@ -740,8 +741,8 @@ const ResultCard = ({ result, label, isPrimary, isUnownedSuggestion }) => {
 
         {result.partiallyCapped && (
           <div className="flex gap-3 items-start">
-            <span className="text-[#a87d55] font-bold mt-1">•</span>
-            <p className="text-base text-[#2d3a2d]">
+            <span className="text-[#a87d55] font-bold mt-0.5 flex-shrink-0">•</span>
+            <p className="text-sm sm:text-base text-[#2d3a2d]">
               Cap partially reached. <strong>S${result.baseSpend.toFixed(2)}</strong> earns base rate only.
             </p>
           </div>
@@ -749,8 +750,8 @@ const ResultCard = ({ result, label, isPrimary, isUnownedSuggestion }) => {
 
         {result.minMonthlySpend > 0 && (
           <div className="flex gap-3 items-start">
-            <span className="text-[#5a6b5a] font-bold mt-1">•</span>
-            <p className="text-base text-[#2d3a2d]">
+            <span className="text-[#5a6b5a] font-bold mt-0.5 flex-shrink-0">•</span>
+            <p className="text-sm sm:text-base text-[#2d3a2d]">
               Requires <strong>S${result.minMonthlySpend} minimum monthly spend</strong> to earn bonus rate
             </p>
           </div>
@@ -758,15 +759,15 @@ const ResultCard = ({ result, label, isPrimary, isUnownedSuggestion }) => {
 
         {result.conditions && (
           <div className="flex gap-3 items-start">
-            <span className="text-[#5a6b5a] font-bold mt-1">•</span>
-            <p className="text-base text-[#5a5648]">{result.conditions}</p>
+            <span className="text-[#5a6b5a] font-bold mt-0.5 flex-shrink-0">•</span>
+            <p className="text-sm sm:text-base text-[#5a5648]">{result.conditions}</p>
           </div>
         )}
 
         {result.notes && (
           <div className="flex gap-3 items-start">
-            <span className="text-[#5a6b5a] font-bold mt-1">•</span>
-            <p className="text-base text-[#5a5648] italic">{result.notes}</p>
+            <span className="text-[#5a6b5a] font-bold mt-0.5 flex-shrink-0">•</span>
+            <p className="text-sm sm:text-base text-[#5a5648] italic">{result.notes}</p>
           </div>
         )}
       </div>
@@ -776,17 +777,17 @@ const ResultCard = ({ result, label, isPrimary, isUnownedSuggestion }) => {
 
 // Onboarding for new users — forces wallet setup
 const OnboardingModal = ({ ownedCards, onToggleCard, onComplete }) => (
-  <div className="fixed inset-0 bg-[#2d3a2d]/50 z-50 flex items-center justify-center p-4 overflow-y-auto">
-    <div className="bg-[#fbf8f1] border-2 border-[#5a6b5a] rounded-xl max-w-2xl w-full my-8 p-8">
-      <h2 className="text-3xl font-bold text-[#2d3a2d] mb-4">Welcome</h2>
-      <p className="text-lg text-[#2d3a2d] mb-3">
+  <div className="fixed inset-0 bg-[#2d3a2d]/80 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div className="bg-[#fbf8f1] border-2 border-[#5a6b5a] rounded-xl w-full max-w-xl my-4 p-5 sm:p-8 shadow-2xl">
+      <h2 className="text-2xl sm:text-3xl font-bold text-[#2d3a2d] mb-3">Welcome</h2>
+      <p className="text-base sm:text-lg text-[#2d3a2d] mb-2">
         Before we recommend anything, tell us which credit cards you currently hold.
       </p>
-      <p className="text-base text-[#5a5648] mb-8">
+      <p className="text-sm sm:text-base text-[#5a5648] mb-6">
         Recommendations will prioritize cards in your wallet. You can change this anytime in Settings.
       </p>
 
-      <div className="space-y-3 mb-8 max-h-96 overflow-y-auto pr-2">
+      <div className="space-y-2 mb-6 max-h-[50vh] overflow-y-auto pr-1">
         {CARDS_DATA.cards.map((card) => {
           const owned = ownedCards.includes(card.id);
           return (
@@ -794,38 +795,38 @@ const OnboardingModal = ({ ownedCards, onToggleCard, onComplete }) => (
               key={card.id}
               onClick={() => onToggleCard(card.id)}
               aria-pressed={owned}
-              className={`w-full flex items-center justify-between p-4 border-2 rounded-lg text-left transition-colors ${
+              className={`w-full flex items-center justify-between p-3 sm:p-4 border-2 rounded-lg text-left transition-colors ${
                 owned
                   ? "border-[#5a6b5a] bg-[#e8e2d5]"
                   : "border-[#c4b8a8] bg-white hover:border-[#8a8375]"
               }`}
             >
-              <div className="flex-1 pr-4">
-                <div className="text-base font-bold text-[#2d3a2d]">{card.cardName}</div>
-                <div className="text-sm text-[#5a5648] mt-1">
+              <div className="flex-1 pr-3 min-w-0">
+                <div className="text-sm sm:text-base font-bold text-[#2d3a2d] leading-tight">{card.cardName}</div>
+                <div className="text-xs sm:text-sm text-[#5a5648] mt-1">
                   {card.issuer} · {card.rewardType}
                 </div>
               </div>
               <div
-                className={`w-6 h-6 border-2 rounded flex items-center justify-center flex-shrink-0 ${
+                className={`w-5 h-5 sm:w-6 sm:h-6 border-2 rounded flex items-center justify-center flex-shrink-0 ${
                   owned ? "border-[#5a6b5a] bg-[#5a6b5a]" : "border-[#c4b8a8] bg-white"
                 }`}
               >
-                {owned && <span className="text-white text-sm font-bold">✓</span>}
+                {owned && <span className="text-white text-xs sm:text-sm font-bold">✓</span>}
               </div>
             </button>
           );
         })}
       </div>
 
-      <div className="flex items-center justify-between gap-4 pt-4 border-t-2 border-[#c4b8a8]">
-        <p className="text-base text-[#5a5648]">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-4 border-t-2 border-[#c4b8a8]">
+        <p className="text-sm sm:text-base text-[#5a5648] text-center sm:text-left">
           <strong>{ownedCards.length}</strong> {ownedCards.length === 1 ? "card" : "cards"} selected
         </p>
         <button
           onClick={onComplete}
           disabled={ownedCards.length === 0}
-          className="px-6 py-3 bg-[#5a6b5a] text-white font-bold rounded-lg hover:bg-[#2d3a2d] disabled:bg-[#c4b8a8] disabled:cursor-not-allowed transition-colors"
+          className="px-5 py-3 bg-[#5a6b5a] text-white font-bold rounded-lg hover:bg-[#2d3a2d] disabled:bg-[#c4b8a8] disabled:cursor-not-allowed transition-colors"
         >
           {ownedCards.length === 0 ? "Select at least one" : "Continue →"}
         </button>
@@ -908,56 +909,57 @@ export default function App() {
       {/* Wallet button */}
       <button
         onClick={() => setSettingsOpen(true)}
-        className="fixed top-6 right-6 z-30 px-5 py-3 border-2 border-[#5a6b5a] bg-white text-[#2d3a2d] font-bold rounded-lg hover:bg-[#e8e2d5] transition-colors"
+        className="fixed top-4 right-4 sm:top-6 sm:right-6 z-30 px-3 py-2 sm:px-5 sm:py-3 border-2 border-[#5a6b5a] bg-white text-[#2d3a2d] text-sm sm:text-base font-bold rounded-lg hover:bg-[#e8e2d5] transition-colors shadow-sm"
         aria-label="Open wallet and tracker settings"
       >
         Wallet ({userState.ownedCards.length})
       </button>
 
-      <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 pt-20 sm:pt-16">
         {/* Header */}
-        <header className="mb-12">
-          <p className="text-sm font-bold uppercase tracking-wider text-[#5a6b5a] mb-3">
+        <header className="mb-10 sm:mb-12">
+          <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#5a6b5a] mb-3">
             Singapore · Credit Card Optimizer · 2026
           </p>
-          <h1 className="text-5xl md:text-6xl font-bold text-[#2d3a2d] mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-[#2d3a2d] mb-4 sm:mb-6 leading-tight">
             Which card should I use?
           </h1>
-          <p className="text-xl text-[#2d3a2d] max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-xl text-[#2d3a2d] max-w-2xl leading-relaxed">
             Tell us how much you're about to spend and on what. We'll recommend the best card from your wallet — updated with 2026 rates.
           </p>
         </header>
 
         {/* Form */}
-        <section className="space-y-8 mb-12 bg-white border-2 border-[#c4b8a8] rounded-xl p-8">
+        <section className="space-y-6 sm:space-y-8 mb-8 sm:mb-12 bg-white border-2 border-[#c4b8a8] rounded-xl p-5 sm:p-8">
           <div>
-            <label htmlFor="amount-input" className="block text-base font-bold text-[#2d3a2d] mb-3">
+            <label htmlFor="amount-input" className="block text-sm sm:text-base font-bold text-[#2d3a2d] mb-3">
               1. How much are you spending?
             </label>
             <div className="relative">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl font-bold text-[#5a5648]">
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl sm:text-2xl font-bold text-[#5a5648]">
                 S$
               </span>
               <input
                 id="amount-input"
                 type="number"
+                inputMode="decimal"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
                 placeholder="0.00"
-                className="w-full pl-14 pr-4 py-4 text-2xl font-bold text-[#2d3a2d] bg-[#fbf8f1] border-2 border-[#c4b8a8] rounded-lg focus:border-[#5a6b5a] focus:outline-none"
+                className="w-full pl-14 pr-4 py-3 sm:py-4 text-xl sm:text-2xl font-bold text-[#2d3a2d] bg-[#fbf8f1] border-2 border-[#c4b8a8] rounded-lg focus:border-[#5a6b5a] focus:outline-none"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="category-select" className="block text-base font-bold text-[#2d3a2d] mb-3">
+            <label htmlFor="category-select" className="block text-sm sm:text-base font-bold text-[#2d3a2d] mb-3">
               2. What category is this spend?
             </label>
             <select
               id="category-select"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full px-4 py-4 text-xl font-bold text-[#2d3a2d] bg-[#fbf8f1] border-2 border-[#c4b8a8] rounded-lg focus:border-[#5a6b5a] focus:outline-none cursor-pointer"
+              className="w-full px-4 py-3 sm:py-4 text-lg sm:text-xl font-bold text-[#2d3a2d] bg-[#fbf8f1] border-2 border-[#c4b8a8] rounded-lg focus:border-[#5a6b5a] focus:outline-none cursor-pointer"
             >
               {CATEGORIES.map((cat) => (
                 <option key={cat} value={cat}>
@@ -968,9 +970,9 @@ export default function App() {
           </div>
 
           <div>
-            <p className="text-base font-bold text-[#2d3a2d] mb-3">3. What do you prefer to earn?</p>
+            <p className="text-sm sm:text-base font-bold text-[#2d3a2d] mb-3">3. What do you prefer to earn?</p>
             <PreferenceToggle value={preference} onChange={setPreference} />
-            <p className="text-sm text-[#5a5648] mt-3">
+            <p className="text-xs sm:text-sm text-[#5a5648] mt-3">
               {preference === "Auto"
                 ? "Miles are valued at S$0.015 each to compare fairly with cashback."
                 : preference === "Miles"
@@ -985,9 +987,9 @@ export default function App() {
                 type="checkbox"
                 checked={showUnowned}
                 onChange={(e) => setShowUnowned(e.target.checked)}
-                className="mt-1 w-5 h-5 rounded border-2 border-[#c4b8a8] cursor-pointer"
+                className="mt-1 w-5 h-5 rounded border-2 border-[#c4b8a8] cursor-pointer flex-shrink-0"
               />
-              <span className="text-base text-[#2d3a2d]">
+              <span className="text-sm sm:text-base text-[#2d3a2d]">
                 Also show me cards I don't own that would earn significantly more
               </span>
             </label>
